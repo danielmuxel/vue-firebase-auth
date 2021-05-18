@@ -1,20 +1,52 @@
 <template>
-  <h1>Register</h1>
+<div class="columns">
+  <div class="column">
+    <div class="box is-shadowless">
+      <h1 class="title">Get to be a part of our community!</h1>
+      <p>Join thousands of ... (add purpose of your website here)</p>
+    </div>
+    
+  </div>
+  <div class="column">
+    <form class="box" @submit.prevent="submit">
+    <h2 class="title">Register</h2>
 
-  <div v-if="error">{{ error }}</div>
+    <article v-if="error" class="message is-danger">
+      <div class="message-body">
+        {{ error }}
+      </div>
+    </article>
 
-  <form @submit.prevent="submit">
-    <label>Name</label>
-    <input v-model="form.name" id="name" type="text" />
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input v-model="form.name" class="input" type="text" />
+      </div>
+    </div>
 
-    <label>Email</label>
-    <input v-model="form.email" id="email" type="text" />
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input v-model="form.email" class="input" type="text" />
+      </div>
+    </div>
 
-    <label>Password</label>
-    <input v-model="form.password" id="password" type="password" />
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input v-model="form.password" class="input" type="password" />
+      </div>
+    </div>
 
-    <button type="submit">Register</button>
+    <div class="field is-grouped">
+      <div class="control">
+        <button type="submit" class="button is-link">Register</button>
+      </div>
+    </div>
   </form>
+  </div>
+</div>
+  
 </template>
 
 <script>
