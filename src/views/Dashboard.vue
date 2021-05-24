@@ -1,6 +1,6 @@
 <template>
   <h1>Dashboard</h1>
-  <div v-if="user">
+  <div v-if="user.data">
     {{ user }}
     Hello {{ user.data.displayName }}, happy to see you!
   </div>
